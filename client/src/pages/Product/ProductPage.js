@@ -1,6 +1,8 @@
 import React from 'react'
 import Product from '../../components/Product'
 import Footer from '../../components/Footer'
+import IsMobileView from '../../Utilities/IsMobileView'
+import { NavbarMobile } from '../../components/Navbar'
  
 
 
@@ -9,7 +11,8 @@ const ProductPage = () => {
     <>
 
         <Product/>
-        <Footer/>
+        {!IsMobileView() && <Footer/>}
+      {IsMobileView() && <NavbarMobile/>}
     </>
   )
 }
