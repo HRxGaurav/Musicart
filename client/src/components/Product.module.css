@@ -1,0 +1,454 @@
+.main {
+  padding-left: 95px;
+  padding-right: 69px;
+  align-items: center;
+  margin-top: 42px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftSide {
+  display: flex;
+  cursor: pointer;
+}
+
+.logo {
+  width: 63px;
+  height: 63px;
+}
+
+.headerText {
+  margin-left: 8px;
+  color: #2e0052;
+  font-size: 44.13px;
+  font-weight: 600;
+}
+
+.home {
+  margin-left: 28px;
+  color: #000;
+  font-size: 26.411px;
+  font-weight: 400;
+}
+
+.cartButton {
+  width: 189px;
+  height: 52px;
+  border-radius: 47px;
+  background: #1d7000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cartText {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: 5.7px;
+}
+
+.backTo {
+  margin-top: 69px;
+  width: 281px;
+  height: 59px;
+  border-radius: 14px;
+  background: #2e0052;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 28.125px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.productName {
+  margin-top: 60px;
+  padding: 0 29px 0 108px;
+  color: #000;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 42px;
+}
+
+.ProductDetailMain {
+  padding: 62px 0 75px 100px;
+  display: flex;
+}
+
+.mainImage {
+  width: 839.092px;
+  height: 824px;
+  border-radius: 25px;
+  background: #2e0052;
+  border: 6px solid #2e0052;
+}
+
+.otherImageDiv {
+  display: flex;
+  gap: 35px;
+  margin-top: 54px;
+}
+
+.otherImage {
+  width: 257px;
+  height: 212px;
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 5px solid #000;
+}
+
+.ProductDetailRight {
+  padding: 0 56px 0 41px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  margin-top: 48px;
+
+  .name {
+    color: #000;
+    font-family: Roboto;
+    font-size: 51.995px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .price {
+    color: #000;
+    font-family: Roboto;
+    font-size: 33.972px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 26px;
+  }
+
+  .type {
+    color: #000;
+    font-family: Roboto;
+    font-size: 33.97px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 13px;
+    margin-bottom: 20px;
+  }
+
+  .rating {
+    margin-top: 21px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .about,
+  .list {
+    color: #000;
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .avilability {
+    color: #000;
+    font-family: Roboto;
+    font-size: 33.972px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 20px;
+
+    span {
+      color: #000;
+      font-family: Roboto;
+      font-size: 33.972px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .brand {
+    color: #000;
+    font-family: Roboto;
+    font-size: 33.972px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 13px;
+
+    span {
+      color: #000;
+      font-family: Roboto;
+      font-size: 33.972px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  }
+
+  .addToCart {
+    width: 479px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: #ffd600;
+    color: #000;
+    font-family: Roboto;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .buyNow {
+    width: 479px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: #ffb800;
+    color: #000;
+    font-family: Roboto;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .LoginButton {
+    width: 300px;
+    height: 64px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    background: #ffb800;
+    color: #000;
+    font-family: Roboto;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+
+@media (min-width: 700px) {
+
+  .mainMobile,
+  .backButtonMobile,
+  .ProductDetailMainMobile,
+  .productNameMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .hideInMobileView,
+  .productName,
+  .ProductDetailMain {
+    display: none;
+  }
+
+  .backButtonMobile {
+    margin: 13px;
+  }
+
+  .ProductDetailMainMobile {
+    padding: 0 20px;
+  }
+
+  .ProductDetailLeftMobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+
+  .mainImageMobile {
+    width: 100%;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 3px solid #2E0052;
+    margin-right: 21px;
+
+  }
+
+  .nameMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 30.006px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 23px;
+  }
+
+  .ratingMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 15.281px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 16px;
+  }
+
+  .productNameMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 11px;
+  }
+
+  .priceMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 17.79px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  .typeMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 17.789px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 5px;
+  }
+
+  .aboutMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 13.45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    margin-top: 5px;
+  }
+
+  .listMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 13.45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .availabilityMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 17.79px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 11px;
+
+    span {
+      color: #000;
+      font-family: Roboto;
+      font-size: 17.79px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+    }
+  }
+
+  .brandMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 17.79px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 6px;
+
+    span {
+      color: #000;
+      font-family: Roboto;
+      font-size: 17.79px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+    }
+  }
+
+  .addToCartMobile {
+    width: 100%;
+    height: 44px;
+    margin-top: 21px;
+    border-radius: 8px;
+    background: #FFD600;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .buyNowMobile {
+    height: 44px;
+    width: 100%;
+    margin-top: 9px;
+    border-radius: 8px;
+    background: #FFB800;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+  }
+
+  .LoginButtonMobile{
+    width: 100%;
+    height: 44px;
+    margin-top: 21px;
+    border-radius: 8px;
+    background: #FFD600;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+}

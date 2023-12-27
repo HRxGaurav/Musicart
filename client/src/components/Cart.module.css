@@ -1,0 +1,411 @@
+.main {
+  padding: 72px 63px 0 107px;
+  display: flex;
+  flex-direction: column;
+}
+
+.myCartDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 101.26px;
+}
+
+.myCartText {
+  color: #000;
+  font-size: 39.831px;
+  font-weight: 700;
+  margin-left: 21.33px;
+}
+
+.line {
+  background: #e1e1e1;
+  width: 1136.853px;
+  height: 2.871px;
+}
+
+.line2 {
+  background: #e1e1e1;
+  width: 1136.853px;
+  height: 2.871px;
+  margin-top: 96.22px;
+}
+
+.cartItemDiv {
+  display: flex;
+}
+
+.image {
+  width: 285.145px;
+  height: 280.017px;
+  flex-shrink: 0;
+  border-radius: 6.117px;
+  border: 2px solid #2e0052;
+  margin-top: 48.65px;
+}
+
+.productDetailDiv {
+  margin-top: 48.57px;
+  margin-left: 42.27px;
+
+  .colour {
+    color: #A2A2A2;
+    font-size: 26.793px;
+    font-weight: 400;
+    line-height: 33.098px;
+    margin-top: 19.69px;
+  }
+
+  .stock {
+    color: #A2A2A2;
+    font-size: 26.793px;
+    font-weight: 400;
+    line-height: 33.098px;
+    margin-top: 12.07px;
+  }
+}
+
+.name {
+  color: #000;
+  font-size: 29.925px;
+  font-weight: 600;
+  line-height: 36.967px;
+}
+
+.priceDiv {
+  margin-top: 48.57px;
+  margin-left: 79.36px;
+}
+
+.quantityDiv {
+  margin-top: 48.57px;
+  margin-left: 79.8px;
+}
+
+.totalDiv {
+  margin-top: 48.57px;
+  margin-left: 78.39px;
+}
+
+.total,
+.price {
+  color: #000;
+  font-size: 29.925px;
+  font-weight: 400;
+  line-height: 36.967px;
+  margin-top: 16.82px;
+}
+
+.quantity {
+  width: 111.963px;
+  height: 29.665px;
+  flex-shrink: 0;
+  border-radius: 2.871px;
+  border: 0.957px solid #BEBEBE;
+  background: #FFF;
+  color: #000;
+  font-size: 18.182px;
+  font-weight: 400;
+  line-height: 36.967px;
+  margin-top: 16.82px;
+}
+
+.totalBottomDiv {
+  display: flex;
+  margin-top: 26.79px;
+  margin-bottom: 200px;
+
+  .totalItem {
+    color: #000;
+    font-family: Roboto;
+    font-size: 29.925px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36.967px;
+    margin-left: 336.85px;
+
+  }
+
+  .totalValue {
+    color: #000;
+    font-family: Roboto;
+    font-size: 29.925px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36.967px;
+    margin-left: 579.08px;
+  }
+}
+
+.itmesDivMain {
+  display: flex;
+}
+
+.verticalLine {
+  width: 2.871px;
+  height: 515px;
+  background: #E1E1E1;
+  margin-left: 10.15px;
+  margin-top: -10px;
+}
+
+.grossMainDiv {
+  margin-left: 27px;
+
+  .priceDetail {
+    color: #000;
+    font-size: 25.167px;
+    font-weight: 500;
+    line-height: 31.089px;
+    margin-bottom: 22.6px;
+  }
+
+
+  .button {
+    width: 386px;
+    height: 67px;
+    flex-shrink: 0;
+    border-radius: 11px;
+    background: #FFD600;
+    color: #000;
+    font-size: 27px;
+    font-weight: 500;
+    letter-spacing: 0.54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 55px;
+  }
+}
+
+.grossContainer {
+  display: flex;
+}
+
+.rightSide {
+  margin-left: 98.45px;
+}
+
+.totalMRP,
+.totalDiscount,
+.totalConvenience,
+.totalMRPValue,
+.totalDiscountValue,
+.totalConvenienceValue {
+  color: #000;
+  font-size: 25.167px;
+  font-weight: 400;
+  line-height: 31.089px;
+  margin-top: 14.96px;
+}
+
+.totalAmount {
+  color: #000;
+  font-size: 29.93px;
+  font-weight: 500;
+  line-height: 31.089px;
+  margin-top: 271px;
+}
+
+.totalAmountValue {
+  color: #000;
+  font-size: 29.93px;
+  font-weight: 400;
+  line-height: 39.457px;
+  margin-top: 271px;
+}
+
+.noDataDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  margin-top: 200px;
+  font-size: 30px;
+}
+
+@media (min-width: 700px) {
+  .mainMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .hideDivInMMobile,
+  .main {
+    display: none;
+  }
+
+  .mainMobile {
+    padding: 15px 13px 19px 13px;
+
+    .container {
+      background: #DBDBDB;
+      margin-top: 23px;
+      padding: 17px 13px;
+
+    }
+
+  }
+
+  .backButtonMobile{
+    cursor: pointer;
+  }
+
+  .imageMobile {
+    width: 164.967px;
+    height: 162px;
+    border-radius: 3.539px;
+    border: none;
+  }
+
+  .productDetailDivMobile {
+    display: flex;
+    margin-bottom: 17px;
+  }
+
+  .leftSideMobile {
+    margin-left: 10.03px;
+    width: 60%;
+
+    .name {
+      color: #000;
+      font-family: Roboto;
+      font-size: 15.89px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.629px;
+    }
+
+    .price {
+      color: #000;
+      font-family: Roboto;
+      font-size: 20.191px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24.941px;
+      margin-top: 5px;
+    }
+
+    .colour {
+      color: #000;
+      font-family: Roboto;
+      font-size: 12.29px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 15.182px;
+      /* 123.529% */
+      margin-top: 4.1px;
+    }
+
+    .stock {
+      color: #000;
+      font-size: 12.29px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 15.182px;
+      margin-top: 5.13px;
+    }
+
+    .convenienceDiv {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .convenienceTag {
+      color: #000;
+      font-family: Roboto;
+      font-size: 12.29px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 15.61px;
+    }
+
+    .convenienceValue {
+      color: #000;
+
+      font-family: Roboto;
+      font-size: 12.29px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 19.812px;
+    }
+  }
+
+  .totalAmountDiv {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -17px;
+
+    .totalAmountTag {
+      color: #000;
+      font-family: Roboto;
+      font-size: 16.526px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.414px;
+    }
+
+    .totalGrossValue {
+      color: #000;
+      font-family: Roboto;
+      font-size: 16.53px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16.985px;
+    }
+  }
+
+  .horizontalLine {
+    margin-top: 30px;
+    background: #000;
+    height: 0.8px;
+    width: 100%;
+  }
+
+  .grossTextBottom {
+    margin-top: 20px;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20.727px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.415px;
+  }
+
+  .grossValueBottom {
+    color: #000;
+    font-family: Roboto;
+    font-size: 20.727px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.415px;
+  }
+
+  .placeOrderButtonMobile {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: #FFD600;
+    height: 44px;
+    width: 100%;
+    color: #000;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    cursor: pointer;
+  }
+
+  .noDataDiv{
+    text-align: center;
+    font-size: 15px;
+  }
+
+}

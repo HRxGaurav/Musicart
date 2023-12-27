@@ -1,0 +1,150 @@
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 63px;
+  background: #2e0052;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.phoneLogo {
+  margin-left: 50px;
+}
+
+.contactNumber {
+  color: #fff;
+  margin-left: 12px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.seperator1 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 0 26px;
+}
+
+.seperator2 {
+  color: #fff;
+  font-size: 24.981px;
+  font-weight: 500;
+  margin: 0 16px;
+}
+
+.text {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.Login {
+  color: #fff;
+  font-size: 24.981px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.signUp {
+  color: #fff;
+  margin-right: 38px;
+  font-size: 24.981px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.logout {
+  color: #fff;
+  margin-right: 52px;
+  font-size: 24.981px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .mainMobile {
+    display: none
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    display: none;
+  }
+
+  .mainMobile {
+    display: flex;
+    height: 48px;
+    background: #2e0052;
+    align-items: center;
+  }
+
+  .containerMobile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .imageMobile {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: 19px;
+  }
+
+  .textMobile {
+    color: #FFF;
+    font-family: Roboto;
+    font-size: 18.669px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-left: 3.58px;
+  }
+
+
+}
+
+.NavbarMobileMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  border-top: 1px solid #C8C8C8;
+  background: #FFF;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 0 21px;
+  padding-top: 11px;
+
+  .stroke {
+    width: 27px;
+    height: 4px;
+    flex-shrink: 0;
+    background: #2E0052;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+
+  }
+
+  .container{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text {
+    color: #000;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+}

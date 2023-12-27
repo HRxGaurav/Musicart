@@ -1,0 +1,46 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87px;
+  background: #2e0052;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: 100px;
+
+}
+
+.text {
+  color: #FFF;
+  font-size: 26.411px;
+  font-weight: 500;
+}
+
+.empty{
+  height: 100px;
+}
+
+@media (max-width: 700px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 51px;
+    background: #2e0052;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  
+  }
+
+  .text {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .empty{
+    height: 20px;
+  }
+}

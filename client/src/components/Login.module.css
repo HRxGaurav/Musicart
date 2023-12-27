@@ -1,0 +1,303 @@
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  margin-top: 65px;
+  cursor: pointer;
+}
+
+.logo {
+  width: 63px;
+  height: 63px;
+}
+
+.headerText {
+  color: #2e0052;
+  font-size: 44.13px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.formDiv {
+  width: 651px;
+  height: 555px;
+  border-radius: 23.201px;
+  border: 3px solid #d9d9d9;
+  background: #fff;
+  margin-top: 64px;
+}
+
+.innerFormDiv {
+  padding-left: 51px;
+  padding-top: 40px;
+}
+
+.innerFormDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.signIn {
+  font-size: 49.222px;
+  font-weight: 400;
+  margin-bottom: 22px;
+  margin-top: 0;
+}
+
+.signInLabel {
+  color: #000;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.signInInput {
+  width: 547px;
+  height: 57px;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+  background: #fff;
+  margin-top: 14px;
+  font-size: 17.75px;
+  padding-left: 10px;
+}
+
+.passwordLabel {
+  color: #000;
+  font-family: Roboto;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 22px;
+}
+
+.passwordInput {
+  width: 547px;
+  height: 57px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  border: 2px solid #b6b6b6;
+  background: #fff;
+  margin-top: 14px;
+  font-size: 17.75px;
+  padding-left: 10px;
+}
+
+.continueButton {
+  width: 547px;
+  height: 66px;
+  border-radius: 8px;
+  background: #2e0052;
+
+  color: #fff;
+  font-size: 27px;
+  font-weight: 500;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.conditionsText {
+  color: #000;
+  font-size: 17.75px;
+  font-weight: 400;
+  line-height: 26px;
+  width: 531px;
+  text-align: left;
+  margin-top: 30px;
+}
+
+.newToDiv {
+  display: flex;
+  margin-top: 57px;
+  align-items: center;
+  margin-bottom: 43px;
+}
+
+.hr {
+  background: #bdbdbd;
+  width: 210px;
+  height: 2px;
+}
+
+.newTo {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 26px;
+  margin: 0 38px;
+}
+
+.registerButton {
+  width: 651px;
+  height: 66px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  background: #fff;
+
+  color: #000;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 91px;
+  cursor: pointer;
+}
+
+
+@media (min-width: 700px) {
+
+  .signInMobile,
+  .welcomeText {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .home {
+    display: none;
+  }
+
+  .welcomeText {
+    color: #2E0052;
+    font-size: 31px;
+    font-weight: 400;
+    align-self: start;
+    margin-top: 32px;
+    margin-left: 20px;
+  }
+
+  .signInMobile {
+    color: #000;
+    font-size: 13.361px;
+    font-weight: 300;
+  }
+
+  .formDiv {
+    margin-left: 20px;
+    align-self: start;
+    width: 92%;
+    height: 316px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    background: #fff;
+    margin-top: 20px;
+  }
+
+  .innerFormDiv {
+    padding-left: 15px;
+    padding-top: 14px;
+  }
+
+  .signIn,
+  .signInTextMobile {
+    color: #000;
+    font-family: Roboto;
+    font-size: 15.703px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 17px;
+  }
+
+  .signInLabel {
+    color: #000;
+    font-family: Roboto;
+    font-size: 13.353px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .signInInput,
+  .passwordInput {
+    width: 94%;
+    height: 35px;
+    flex-shrink: 0;
+    margin-top: 8px;
+    font-size: 13px;
+  }
+
+  .signInInput::placeholder,
+  .passwordInput::placeholder {
+    color: transparent;
+  }
+
+  .passwordLabel {
+    margin-top: 13.23px;
+    font-size: 13.353px;
+    font-weight: 500;
+  }
+
+  .continueButton {
+    width: 94%;
+    height: 40px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-size: 16.387px;
+    font-weight: 500;
+    margin-top: 18px;
+
+  }
+
+  .conditionsText {
+    font-size: 10.773px;
+    font-weight: 400;
+    line-height: 15.781px;
+    width: 94%;
+    margin-top: 16px;
+  }
+
+  .hr {
+    background: #bdbdbd;
+    height: 0.98px;
+    width: 34%;
+  }
+
+  .newTo {
+  color: #000;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 12px;
+  margin: 0 13px;
+}
+
+.newToDiv {
+  display: flex;
+  margin-top: 23px;
+  align-items: center;
+  margin-bottom: 23px;
+  width: 90%;
+}
+
+.registerButton{
+  width: 94%;
+height: 42px;
+  border-radius: 10px;
+  border: 2px solid #bdbdbd;
+  background: #fff;
+
+  color: #000;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 91px;
+  cursor: pointer;
+}
+
+
+
+}
