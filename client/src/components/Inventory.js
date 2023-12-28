@@ -12,6 +12,7 @@ import getFilteredInventoryApi from '../APIs/getFilteredInventoryAPI.js';
 import addToCartAPI from "../APIs/addToCartAPI.js";
 import toast from 'react-hot-toast';
 import saleBannerMobile from '../assets/images/saleBannerMobile.png'
+import Loader from './Modals/Loader.js'
 
 
 const Products = ({ gridView, response }) => {
@@ -83,21 +84,32 @@ const Products = ({ gridView, response }) => {
     )
 }
 
+const Nodata = () => {
+    return (
+      <>
+        <div className={style.noDataDiv}>
+          Filters Not matched !
+        </div>
+      </>
+    )
+  }
+
+
 const Inventory = () => {
     const [gridView, setGridView] = useState(true)
-
     const [filterData, setFilterData] = useState({ fullname: '', priceRange: '', type: '', colour: '', company: '', sortBy: '' });
-
     const [searchQuery, setSearchQuery] = useState("");
     const [filteredInventory, setFilteredInventory] = useState([]);
+    const [isLoading, setIsLoading] = useState(true)
 
     const fetchFilteredInventory = async () => {
         const response = await getFilteredInventoryApi(filterData);
 
         if (response.success) {
+            setIsLoading(false)
             setFilteredInventory(response.data.inventoryItems);
-            console.log(response.data.inventoryItems);
         } else {
+            setIsLoading(false)
             console.error('Error fetching filtered inventory:', response.error);
         }
     };
@@ -195,7 +207,7 @@ const Inventory = () => {
             </div>
 
 
-            <div className={style.itemsMain}>
+            {filteredInventory.length>0 && <div className={style.itemsMain}>
 
 
                 {filteredInventory.map((data) => {
@@ -205,7 +217,7 @@ const Inventory = () => {
                 })}
 
 
-            </div>
+            </div>}
 
 
             {/* -----------------------------Mobile View----------------------------------------- */}
@@ -274,8 +286,7 @@ const Inventory = () => {
             </div>
 
 
-
-            <div className={style.itemsMainMobile}>
+            {filteredInventory.length>0 && <div className={style.itemsMainMobile}>
 
 
                 {filteredInventory.map((data) => {
@@ -285,7 +296,10 @@ const Inventory = () => {
                 })}
 
 
-            </div>
+            </div>}
+
+            {filteredInventory.length<1 && !isLoading &&  <Nodata/>}
+            {isLoading && <Loader/>}
 
         </>
     );

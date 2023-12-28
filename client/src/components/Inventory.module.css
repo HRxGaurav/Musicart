@@ -243,6 +243,16 @@
   margin-top: 16px;
 }
 
+.noDataDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: grey;
+  margin-top: 200px;
+  font-size: 30px;
+  margin-bottom: 200px;
+}
+
 @media (min-width: 700px) {
 
   .mainMobile,
@@ -483,5 +493,10 @@
     font-weight: 500;
     line-height: normal;
     margin-top: 5.09px;
+  }
+
+  .noDataDiv{
+    text-align: center;
+    font-size: 15px;
   }
 }

@@ -11,9 +11,11 @@ import toast from 'react-hot-toast';
 import CheckoutDirect from "./CheckoutDirect.js";
 import Navbar, { HomeHeaderMobile } from "./Navbar.js";
 import backButtonMobile from '../assets/icons/backButtonMobile.svg'
+import Loader from './Modals/Loader.js'
 
 const HomePageHeader = ({ pageName, showCart, navigatePage, navigatePageText }) => {
     const navigate = useNavigate();
+
     return (
         <>
             <div className={style.main}>
@@ -41,9 +43,10 @@ const ProductDetails = () => {
     const [isUserLoggedin] = useContext(LogContext);
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [imageIndex, setImageIndex] = useState(0);
     const [isCheckoutVisible, setCheckoutVisible] = useState(false);
     const { id } = useParams();
-
+    
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -64,6 +67,10 @@ const ProductDetails = () => {
 
         fetchData();
     }, [id]);
+
+    const handleImageClick = (index)=>{
+        setImageIndex(index)
+    }
 
     const handleAddToCart = async (event, productId) => {
         event.stopPropagation();
@@ -99,14 +106,14 @@ const ProductDetails = () => {
 
                     <div className={style.ProductDetailMain}>
                         <div className={style.ProductDetailLeft}>
-                            <img src={product?.images[0]} alt="productImage" className={style.mainImage} />
+                            <img src={product?.images[imageIndex]} alt="productImage" className={style.mainImage} />
 
                             <div className={style.otherImageDiv}>
-                                <img src={product?.images[0]} alt="productImage" className={style.otherImage} />
+                                <img src={product?.images[0]} alt="productImage" className={imageIndex===0 ? style.otherImageWithBorder:style.otherImage} onClick={() => (handleImageClick(0))}/>
 
-                                <img src={product?.images[1]} alt="productImage" className={style.otherImage} />
+                                <img src={product?.images[1]} alt="productImage" className={imageIndex===1 ? style.otherImageWithBorder:style.otherImage} onClick={() => (handleImageClick(1))}/>
 
-                                <img src={product?.images[2]} alt="productImage" className={style.otherImage} />
+                                <img src={product?.images[2]} alt="productImage" className={imageIndex===2 ? style.otherImageWithBorder:style.otherImage} onClick={() => (handleImageClick(2))}/>
                             </div>
 
 
@@ -184,7 +191,7 @@ const ProductDetails = () => {
 
 
 
-                </>) : <div>loading....</div>)}
+                </>) : <Loader/>)}
 
 
             {isCheckoutVisible && <CheckoutDirect cartData={product} backPage={setCheckoutVisible} />}
