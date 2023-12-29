@@ -254,7 +254,6 @@ const Inventory = () => {
                         <select className={style.headphoneTypeMobile} defaultValue="" required name="type" onChange={(e) => handleChange(e)}>
                             <option value="" disabled hidden>Headphone type</option>
                             <option value="featured">Featured</option>
-                            <option value="featured">Featured</option>
                             <option value="In-ear headphone">In-ear headphone</option>
                             <option value="On-ear headphone">On-ear headphone</option>
                             <option value="Over-ear headphone">Over-ear headphone</option>
@@ -262,7 +261,6 @@ const Inventory = () => {
 
                         <select className={style.companyMobile} defaultValue="" required name="company" onChange={(e) => handleChange(e)}>
                             <option value="" disabled hidden>Company</option>
-                            <option value="featured">Featured</option>
                             <option value="featured">Featured</option>
                             <option value="JBL">JBL</option>
                             <option value="Sony">Sony</option>
@@ -275,7 +273,6 @@ const Inventory = () => {
                         <select className={style.colourMobile} defaultValue="" required name="colour" onChange={(e) => handleChange(e)}>
                             <option value="" disabled hidden>Colour</option>
                             <option value="featured">Featured</option>
-                            <option value="featured">Featured</option>
                             <option value="Blue">Blue</option>
                             <option value="Black">Black</option>
                             <option value="White">White</option>
@@ -285,7 +282,6 @@ const Inventory = () => {
 
                         <select className={style.priceMobile} defaultValue="" required name="priceRange" onChange={(e) => handleChange(e)}>
                             <option value="" disabled hidden>Price</option>
-                            <option value="featured">Featured</option>
                             <option value="featured">Featured</option>
                             <option value='0-1000'>₹0 - ₹1,000</option>
                             <option value="1000-10000">₹1,000 - ₹10,000</option>
