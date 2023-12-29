@@ -18,7 +18,7 @@
 }
 
 .line {
-    width: 1047px;
+    width: 100%;
     height: 2.871px;
     background: #E1E1E1;
 }
@@ -29,25 +29,25 @@
 
 .deliveryTag {
     color: #B52B00;
-    font-size: 35.457px;
+    font-size: 28.3656px;
     font-weight: 500;
 }
 
 .paymentTag {
     color: #B52B00;
-    font-size: 35.457px;
+    font-size: 28.3656px;
     font-weight: 500;
 }
 
 .reviewTag {
     color: #B52B00;
-    font-size: 35.457px;
+    font-size: 28.3656px;
     font-weight: 500;
 }
 
 .deliveryAddress {
     color: #797979;
-    font-size: 29px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 42.915px;
     margin-left: 265px;
@@ -56,7 +56,7 @@
 
 .paymentMode {
     color: #797979;
-    font-size: 29px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 42.915px;
     margin-left: 257px;
@@ -105,7 +105,8 @@
 
 .placeOrderBottomDiv {
     margin-top: 42px;
-    width: 1047px;
+    /* padding: 30px 20px; */
+    width: 60vw;
     height: 91px;
     flex-shrink: 0;
     border-radius: 16px;
@@ -147,7 +148,7 @@
     .tnc {
         color: #000;
         font-family: Roboto;
-        font-size: 19.629px;
+        font-size: 17px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
@@ -155,9 +156,9 @@
 }
 
 .rightSide {
-    width: 502px;
-    height: 494px;
-    flex-shrink: 0;
+    padding: 21px 19px 65px;
+    width: 30vw;
+    height: min-content;
     border-radius: 16px;
     border: 4px solid #E1E1E1;
     background: #FFF;
@@ -165,11 +166,10 @@
     margin-left: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     .button {
-        width: 454.444px;
+        width: 100%;
         height: 70px;
         flex-shrink: 0;
         border-radius: 13.333px;
@@ -189,7 +189,7 @@
         color: #000;
         text-align: center;
         font-family: Roboto;
-        font-size: 17.75px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 400;
         line-height: 26px;
@@ -197,7 +197,7 @@
     }
 
     .line {
-        width: 469px;
+        width: 95%;
         height: 2.871px;
         background: #E1E1E1;
         margin-top: 17px;
@@ -209,7 +209,7 @@
         font-size: 31.566px;
         font-weight: 500;
         align-self: flex-start;
-        margin-left: 34px;
+        
     }
 
 
@@ -223,7 +223,7 @@
 
 
 .grossDivRight {
-    margin-left: 208px;
+    margin-left: 140px;
 }
 
 .item,
@@ -242,7 +242,7 @@
 }
 
 .line2 {
-    width: 469px;
+    width: 95%;
     height: 2.871px;
     background: #E1E1E1;
     margin: 25px 0 25px 0;
@@ -256,14 +256,14 @@
         color: #B52B00;
         text-align: center;
         font-family: Roboto;
-        font-size: 31.566px;
+        font-size: 28px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
     }
 
     .grossDivRight {
-        margin-left: 121px;
+        margin-left: 89px;
     }
 
 }

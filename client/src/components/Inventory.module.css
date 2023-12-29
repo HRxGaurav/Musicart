@@ -63,7 +63,15 @@
   font-weight: 500;
   text-align: center;
   margin-right: 21px;
+  text-align: center;
 }
+
+.headphoneType option, .company option, .colour option, .price option{
+
+  background-color: white;
+  
+}
+
 
 .company {
   width: 175px;
@@ -115,16 +123,21 @@
 }
 
 .itemsMain {
-  padding: 0 76px 98px 95px;
+  padding: 0 95px 98px 95px;
   margin-top: 94px;
   display: flex;
-  gap: 55px;
+  gap: 30px;
   flex-wrap: wrap;
+  
+}
+
+.productMainDiv{
+  margin-bottom: 20px;
 }
 
 .productMain {
-  width: 348px;
-  height: 348px;
+  width: 300px;
+  height: 300px;
   background: #d4e5ff;
   display: flex;
   align-items: center;
@@ -146,8 +159,8 @@
 }
 
 .productImage {
-  width: 273px;
-  height: 273px;
+  width: 230px;
+  height: 230px;
 }
 
 .productImageList {
@@ -337,6 +350,10 @@
     flex-wrap: nowrap;
     overflow-x: auto;
   }
+
+  /* .filterDivInsideMobile::-webkit-scrollbar{
+    display: none;
+  } */
 
   .sortByMobile {
     width: 83px;

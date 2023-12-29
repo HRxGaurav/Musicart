@@ -15,7 +15,11 @@ const addToCartAPI = async (productId) => {
 
         if (response.status === 200) {
             return { success: true, data };
-        } else {
+        }
+        else if(response.status === 400) {
+            return { success: false, data, limitExist:true };
+        }
+        else {
             console.error('Failed to add to cart:', data.error);
         }
     } catch (error) {

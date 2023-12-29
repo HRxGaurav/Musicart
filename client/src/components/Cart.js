@@ -10,6 +10,7 @@ import updateCartQuantityAPI from "../APIs/updateCartQuantityAPI.js";
 import Checkout from './Checkout.js'
 import Navbar, { HomeHeaderMobile } from "./Navbar.js";
 import backButtonMobile from '../assets/icons/backButtonMobile.svg'
+import Loader from './Modals/Loader.js'
 
 
 const Nodata = () => {
@@ -27,6 +28,7 @@ const Cart = () => {
   const [isUserLoggedin] = useContext(LogContext);
   const [cartData, setCartData] = useState([]);
   const [isCheckoutVisible, setCheckoutVisible] = useState(false);
+  const [isLoading, setIsLoading] = useState(true)
   const ConvenienceFee = 45;
 
 
@@ -35,8 +37,10 @@ const Cart = () => {
     const response = await getCart();
 
     if (response.success) {
+      setIsLoading(false)
       setCartData(response.data.cart);
     } else {
+      setIsLoading(false)
       console.error('Error fetching filtered inventory:', response.error);
     }
   };
@@ -79,7 +83,7 @@ const Cart = () => {
     <>
       {!isCheckoutVisible && <>
         <div className={style.hideDivInMMobile}><Navbar />
-          <HomePageHeader pageName="View Cart" showCart={true && isUserLoggedin} navigatePage='/' navigatePageText='Back to products' /></div>
+          <HomePageHeader pageName="View Cart" showCart={false} navigatePage='/' navigatePageText='Back to products' /></div>
 
         {(cartData.length > 0) ?
           <>
@@ -91,7 +95,7 @@ const Cart = () => {
 
               <div className={style.itmesDivMain}>
 
-                <div>
+                <div className={style.scrollableDiv}>
                   <div className={style.line}></div>
 
                   {cartData.map((item) => {
@@ -223,6 +227,7 @@ const Cart = () => {
       </>}
 
       {isCheckoutVisible && <Checkout cartData={cartData} convenienceFee={ConvenienceFee} backPage={setCheckoutVisible} />}
+      {isLoading && <Loader/>}
     </>
   );
 };
