@@ -83,8 +83,8 @@
 }
 
 .mainImage {
-  width: 839.092px;
-  height: 824px;
+  width: 700px;
+  height: 690px;
   border-radius: 25px;
   background: #2e0052;
   border: 6px solid #2e0052;
@@ -97,8 +97,8 @@
 }
 
 .otherImage {
-  width: 257px;
-  height: 212px;
+  width: 210px;
+  height: 200px;
   flex-shrink: 0;
   border-radius: 16px;
   border: 1px solid #635454;
@@ -106,7 +106,7 @@
 }
 
 .otherImageWithBorder {
-  width: 257px;
+  width: 210px;
   height: 212px;
   flex-shrink: 0;
   border-radius: 16px;
