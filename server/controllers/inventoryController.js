@@ -40,27 +40,31 @@ const getFilteredInventory = async (req, res) => {
       filter.fullname = { $regex: new RegExp(fullname, 'i') };
     }
 
-    if (priceRange) {
-      const [minPrice, maxPrice] = priceRange.split('-');
-      filter.price = {};
-      if (minPrice) {
-        filter.price.$gte = parseFloat(minPrice);
+    if ([priceRange, type, colour, company].includes('featured')) {
+      filter.featured = true;
+    } else {
+      if (priceRange) {
+        const [minPrice, maxPrice] = priceRange.split('-');
+        filter.price = {};
+        if (minPrice) {
+          filter.price.$gte = parseFloat(minPrice);
+        }
+        if (maxPrice) {
+          filter.price.$lte = parseFloat(maxPrice);
+        }
       }
-      if (maxPrice) {
-        filter.price.$lte = parseFloat(maxPrice);
+
+      if (type) {
+        filter.type = type;
       }
-    }
 
-    if (type) {
-      filter.type = type;
-    }
+      if (colour) {
+        filter.colour = colour;
+      }
 
-    if (colour) {
-      filter.colour = colour;
-    }
-
-    if (company) {
-      filter.company = company;
+      if (company) {
+        filter.company = company;
+      }
     }
 
     // If sortBy is provided, apply sorting
@@ -82,14 +86,23 @@ const getFilteredInventory = async (req, res) => {
         sortQuery = { fullname: -1 };
         break;
       default:
-        // If sortBy is not recognized, no sorting
+        // If sortBy is not recognized, default to sorting by featured
+        sortQuery = { featured: -1 };
         break;
     }
 
     // Fetch items with or without sorting based on sortBy condition
     let inventoryItems;
     if (Object.keys(sortQuery).length > 0) {
-      inventoryItems = await Inventory.find(filter).sort(sortQuery);
+      if (sortBy === 'nameAtoZ' || sortBy === 'nameZtoA') {
+        // If sorting by name, set sortQuery for ascending or descending order
+        sortQuery = { fullname: sortBy === 'nameAtoZ' ? 1 : -1 };
+        const collation = { locale: 'en', strength: 2 };
+        inventoryItems = await Inventory.find(filter).collation(collation).sort(sortQuery);
+      } else {
+        // If not sorting by name, use the regular sortQuery for fetching items
+        inventoryItems = await Inventory.find(filter).sort(sortQuery);
+      }
     } else {
       inventoryItems = await Inventory.find(filter);
     }
@@ -100,6 +113,7 @@ const getFilteredInventory = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
+
 
 const addToCart = async (req, res) => {
   const token = req.header('Authorization');
@@ -120,8 +134,14 @@ const addToCart = async (req, res) => {
     const cartItem = user.cart.find(item => item.product.toString() === productId);
 
     if (cartItem) {
-      // If the product is already in the cart, increment the quantity
-      cartItem.quantity += 1;
+      // If the product is already in the cart
+      if (cartItem.quantity >= 8) {
+        // Return an error if the maximum limit is reached
+        return res.status(400).json({ error: "Maximum limit reached for this product" });
+      } else {
+        // Increment the quantity if not at the maximum limit
+        cartItem.quantity += 1;
+      }
     } else {
       // If the product is not in the cart, add a new cart item
       user.cart.push({ product: productId, quantity: 1 });
@@ -136,6 +156,7 @@ const addToCart = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
 
 const clearCart = async (req, res) => {
   const token = req.header('Authorization');
