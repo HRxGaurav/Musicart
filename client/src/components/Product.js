@@ -108,7 +108,9 @@ const ProductDetails = () => {
 
             if (response.success) {
                 toast.success("Added to cart successfully");
-            } else {
+            } else if(response.limitExist){
+                toast.error("Maximum limit reached for this product");
+            }else {
                 console.error('Failed to add to cart:', response.error);
             }
         } catch (error) {
