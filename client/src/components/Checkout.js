@@ -12,17 +12,13 @@ const Checkout = ({ cartData, convenienceFee, backPage }) => {
     const [showOrderDetails, setShowOrderDetails] = useState(true);
 
     useEffect(() => {
-        // Scroll to the top of the page when the component mounts
         window.scrollTo(0, 0);
     }, []);
 
     const calculateTotalPrice = (cart) => {
-        // Use the reduce function to calculate the total price
         const totalPrice = cart.reduce((total, cartItem) => {
-            // Extract product details and quantity from the cart item
             const { product, quantity } = cartItem;
 
-            // Multiply the product price by quantity and add it to the total
             return total + product.price * quantity;
         }, 0);
 

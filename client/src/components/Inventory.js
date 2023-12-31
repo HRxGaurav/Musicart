@@ -13,6 +13,7 @@ import addToCartAPI from "../APIs/addToCartAPI.js";
 import toast from 'react-hot-toast';
 import saleBannerMobile from '../assets/images/saleBannerMobile.png'
 import Loader from './Modals/Loader.js'
+import formatIndianCurrency from "../Utilities/formatIndianCurrency.js";
 
 
 const Products = ({ gridView, response }) => {
@@ -57,7 +58,7 @@ const Products = ({ gridView, response }) => {
                     </div>
                     <div className={gridView ? style.productInfo : style.productInfoList} >
                         <div className={gridView ? style.productName : style.productNameList}>{response.name}</div>
-                        <div className={gridView ? style.productPrice : style.productPriceList}>Price - ₹ {response.price}</div>
+                        <div className={gridView ? style.productPrice : style.productPriceList}>Price - {formatIndianCurrency(response.price)}</div>
                         <div className={gridView ? style.productDetail : style.productDetailList}>{response.colour} | {response.type}</div>
                         <div className={gridView ? style.productDisc : style.productDiscList}>{response.fullname}</div>
                         <div className={gridView ? style.productDetailsButton : style.productDetailsButtonList} onClick={() => (handleProductClick(response._id))}>Details</div>
@@ -78,7 +79,7 @@ const Products = ({ gridView, response }) => {
                     </div>
                     <div className={style.productInfoMobile} onClick={() => (handleProductClick(response._id))}>
                         <div className={style.productNameMobileMobile }>{response.name}</div>
-                        <div className={style.productPriceMobile }>Price - ₹ {response.price}</div>
+                        <div className={style.productPriceMobile }>Price - {formatIndianCurrency(response.price)}</div>
                         <div className={style.productDetailMobile}>{response.colour} | {response.type}</div>
                     </div>
                 </div>
