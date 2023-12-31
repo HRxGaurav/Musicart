@@ -66,10 +66,12 @@ const Cart = () => {
 
 
   const handleQuantityChange = async (productId, newQuantity) => {
+    setIsLoading(true)
     try {
       await updateCartQuantityAPI(productId, newQuantity);
       fetchCart(); 
     } catch (error) {
+      setIsLoading(false)
       console.error('Error updating cart quantity:', error);
     }
   };
