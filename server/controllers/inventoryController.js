@@ -7,10 +7,10 @@ dotenv.config();
 const addInventory = async (req, res) => {
   try {
 
-    const { name, fullname, price, company, colour, type, about_item, images } = req.body;
+    const { name, fullname, price, company, colour, type, about_item, images, featured } = req.body;
 
     // Create a new Inventory instance
-    const newInventoryItem = new Inventory({ name, fullname, price, company, colour, type, about_item, images });
+    const newInventoryItem = new Inventory({ name, fullname, price, company, colour, type, about_item, images, featured });
 
     // Save the new inventory item to the database
     const savedInventoryItem = await newInventoryItem.save();
