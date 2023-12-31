@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { HomePageHeader } from "./Product";
 import style from "./Cart.module.css";
 import myCart from "../assets/icons/myCart.svg";
-import LogContext from '../Utilities/LogContext.js'
 import getCart from "../APIs/getCart.js";
 import formatIndianCurrency from "../Utilities/formatIndianCurrency.js";
 import updateCartQuantityAPI from "../APIs/updateCartQuantityAPI.js";
@@ -11,6 +10,7 @@ import Checkout from './Checkout.js'
 import Navbar, { HomeHeaderMobile } from "./Navbar.js";
 import backButtonMobile from '../assets/icons/backButtonMobile.svg'
 import Loader from './Modals/Loader.js'
+import checkLoggedin from '../APIs/checkLoggedin.js'
 
 
 const Nodata = () => {
@@ -24,14 +24,11 @@ const Nodata = () => {
 }
 
 const Cart = () => {
-  const navigate =useNavigate();
-  const [isUserLoggedin] = useContext(LogContext);
+  const navigate = useNavigate();
   const [cartData, setCartData] = useState([]);
   const [isCheckoutVisible, setCheckoutVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true)
   const ConvenienceFee = 45;
-
-
 
   const fetchCart = async () => {
     const response = await getCart();
@@ -45,28 +42,42 @@ const Cart = () => {
     }
   };
 
+ 
 
   useEffect(() => {
+    const checkLoggedIn = async () => {
+      try {
+        const userLoggedIn = await checkLoggedin();
 
-    fetchCart();
+        if(userLoggedIn === 200){
+          fetchCart();
+        }
+        else{
+          navigate('/login')
+        }
+      } catch (error) {
+        navigate('/login')
+        console.error('Error checking user login status:', error);
+      }
+    };
+
+    checkLoggedIn();
   }, []);
+
 
   const handleQuantityChange = async (productId, newQuantity) => {
     try {
       await updateCartQuantityAPI(productId, newQuantity);
-      fetchCart(); // Refresh cart data after updating quantity
+      fetchCart(); 
     } catch (error) {
       console.error('Error updating cart quantity:', error);
     }
   };
 
   const calculateTotalPrice = (cart) => {
-    // Use the reduce function to calculate the total price
     const totalPrice = cart.reduce((total, cartItem) => {
-      // Extract product details and quantity from the cart item
       const { product, quantity } = cartItem;
 
-      // Multiply the product price by quantity and add it to the total
       return total + product.price * quantity;
     }, 0);
 
@@ -74,7 +85,6 @@ const Cart = () => {
   };
 
   const handlePlaceOrder = () => {
-    // Add any logic you need before showing the Checkout component
     setCheckoutVisible(true);
   };
 
@@ -182,7 +192,7 @@ const Cart = () => {
 
             {/* ------------------------------------------Mobile View code ------------------------------------------------- */}
             <HomeHeaderMobile />
-            <div className={style.mainMobile}> <img src={backButtonMobile} alt="backButton" className={style.backButtonMobile} onClick={() => (navigate('/'))}/>
+            <div className={style.mainMobile}> <img src={backButtonMobile} alt="backButton" className={style.backButtonMobile} onClick={() => (navigate('/'))} />
 
               <div className={style.container}>
 
@@ -197,14 +207,14 @@ const Cart = () => {
                       <div className={style.colour}>Quantity : {item.quantity}</div>
                       <div className={style.colour}>Colour : {item.product.colour}</div>
                       <div className={style.stock}>In Stock</div>
-                      
-                      
-                      {arr.length-1 === index && <div className={style.convenienceDiv}>
+
+
+                      {arr.length - 1 === index && <div className={style.convenienceDiv}>
                         <div className={style.convenienceTag}>Convenience Fee</div>
                         <div className={style.convenienceValue}>{formatIndianCurrency(ConvenienceFee)}</div>
                       </div>}
-                      
-                      {arr.length-1 === index && <div className={style.totalAmountDiv}>
+
+                      {arr.length - 1 === index && <div className={style.totalAmountDiv}>
                         <div className={style.totalAmountTag}> Total : </div>
                         <div className={style.totalGrossValue}>{formatIndianCurrency(calculateTotalPrice(cartData) + ConvenienceFee)}</div>
                       </div>}
@@ -221,13 +231,13 @@ const Cart = () => {
             </div>
 
           </>
-          :<>
-          <HomeHeaderMobile />
-          <Nodata /></>}
+          : <>
+            <HomeHeaderMobile />
+            <Nodata /></>}
       </>}
 
       {isCheckoutVisible && <Checkout cartData={cartData} convenienceFee={ConvenienceFee} backPage={setCheckoutVisible} />}
-      {isLoading && <Loader/>}
+      {isLoading && <Loader />}
     </>
   );
 };
