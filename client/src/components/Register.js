@@ -60,9 +60,9 @@ const Register = () => {
             <label className={style.signInLabel}>Your name</label>
             <input className={style.signInInput} type='text' value={name} onChange={(e) => setName(e.target.value)} />
             <label className={style.passwordLabel}>Mobile number</label>
-            <input className={style.signInInput} type='text' value={phone} onChange={(e) => setPhone(e.target.value)} />
+            <input className={style.signInInput} type='number' value={phone} onChange={(e) => setPhone(e.target.value)} />
             <label className={style.passwordLabel}>Email Id</label>
-            <input className={style.signInInput} type='text' value={email} onChange={(e) => setEmail(e.target.value)} />
+            <input className={style.signInInput} type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
             <label className={style.passwordLabel}>Password</label>
             <input className={style.passwordInput} type='password' value={password} onChange={(e) => setPassword(e.target.value)} />
 
