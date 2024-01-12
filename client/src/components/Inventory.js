@@ -107,6 +107,7 @@ const Inventory = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     const fetchFilteredInventory = async () => {
+        setIsLoading(true)
         const response = await getFilteredInventoryApi(filterData);
 
         if (response.success) {
