@@ -202,7 +202,6 @@ const getCart = async (req, res) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY);
     const userId = decoded.userID;
-    // const userId = "65865cacaba2687acbb4dea3";
 
     // Find the user by ID and populate the product details
     const user = await User.findById(userId).populate('cart.product');
