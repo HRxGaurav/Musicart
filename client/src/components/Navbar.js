@@ -156,7 +156,7 @@ const Navbar = () => {
 
         <div className={style.container}>
           <img src={phoneLogo} alt="phonelogo" className={style.phoneLogo} />
-          <div className={style.contactNumber}>912121131313</div>
+          <div className={style.contactNumber}>+91 8564076313</div>
         </div>
 
         <div className={style.container}>
