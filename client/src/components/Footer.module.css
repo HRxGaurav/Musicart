@@ -1,14 +1,23 @@
 .main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 87px;
+  /* height: 87px; */
   background: #2e0052;
   position: absolute;
   bottom: 0;
   width: 100%;
   margin-top: 100px;
+  padding: 15px 0;
 
+}
+
+.textT{
+  color: #FFF;
+  font-size: 26.411px;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 .text {
@@ -38,6 +47,13 @@
     color: #FFF;
     font-size: 14px;
     font-weight: 500;
+  }
+
+  .textT{
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
   }
   
   .empty{

@@ -10,6 +10,7 @@ import { Toaster } from 'react-hot-toast';
 import LogContext from "./Utilities/LogContext";
 import OrderSuccess from "./components/OrderSuccess";
 import Checkout from "./components/Checkout";
+import Termspage from "./pages/Termspage";
 
 function App() {
   const [isUserLoggedin, setIsUserLoggedin] = useState(false);
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/success" element={<OrderSuccess />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/terms_and_conditions" element={<Termspage />} />
         </Routes>
         <Toaster position="top-center" toastOptions={{ style: { width: "300px ", fontSize: "30px" } }} />
       </LogContext.Provider>
