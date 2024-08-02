@@ -90,7 +90,17 @@ const Policies = () => {
       </div>
 
       <div style={sectionStyle}>
+        <h2 style={headingStyle}>Return Policy</h2>
+        <p style={policyText}>
+          You can raise return request within 7 days when the order is delivered.
+        </p>
+      </div>
+
+      <div style={sectionStyle}>
         <h2 style={headingStyle}>Refund Policy</h2>
+        <p style={policyText}>
+          Once the ticket is validated your refund will be issued in 2 business day and after that it will take to reach source account in 7 working days.
+        </p>
         <p style={policyText}>
           We offer refunds within 7 days of purchase only for items that are
           damaged or different from what you ordered. To request a refund,
