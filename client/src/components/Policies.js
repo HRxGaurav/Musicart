@@ -97,6 +97,9 @@ const Policies = () => {
           please contact our customer service team with your order details and
           evidence of the issue.
         </p>
+        <p style={policyText}>
+          Once the ticket is validated your refund will be issued in 2 business day and after that it will take to reach source account in 7 working days.
+        </p>
       </div>
 
       <div style={sectionStyle}>
