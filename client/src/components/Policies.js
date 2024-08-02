@@ -37,6 +37,9 @@ const Policies = () => {
       <div style={sectionStyle}>
         <h2 style={headingStyle}>Terms & Conditions</h2>
         <p style={policyText}>
+          MusicArt is run by Munna Enterprises
+        </p>
+        <p style={policyText}>
           Welcome to our e-commerce website for music headphones and earphones.
           By accessing or using our website, you agree to comply with and be
           bound by the following terms and conditions:
