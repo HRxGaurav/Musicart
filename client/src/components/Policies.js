@@ -48,25 +48,57 @@ const Policies = () => {
         <p style={policyText}>
           You (the user) are advised to read these terms carefully every time you use the musicart.in website.
         </p>
-        <ul style={policyText}>
-          <li style={listText}>All prices listed on our website are subject to change without notice.</li>
-          <li style={listText}>We reserve the right to refuse service to anyone for any reason at any time.</li>
-          <li style={listText}>All products are subject to availability, and we reserve the right to limit the quantity of products supplied.</li>
-          <li style={listText}>We make every effort to display colors and images of our products accurately. However, we cannot guarantee that your computer monitor's display of any color will be accurate.</li>
-          <li style={listText}>By placing an order on our website, you represent that you are at least the age of majority in your state or province of residence.</li>
-          <li style={listText}>Color Discrepancy: We have made every effort to display the color of our products as accurately as possible. However, we cannot guarantee that your monitor's display of color will be accurate.</li>
-          <li style={listText}>Customer Age: The user certifies that they are at least 18 years of age or have the consent of a parent or legal guardian.</li>
-          <li style={listText}>Non-Liability Clause: Music Art will not be responsible for any damage suffered by users from the use of the services on musicart.in, including loss of revenue or data due to delays, non-deliveries, or service interruptions.</li>
-          <li style={listText}>Order Fulfillment: Music Art will take responsibility for your order if it has been shipped to any city using private courier companies that service your pincode.</li>
-          <li style={listText}>Changes in Price and Stock Availability: Prices and availability of products are subject to change without prior notice at the discretion of Music Art.</li>
-          <li style={listText}>Order Cancellations: Requests for order cancellations shall be entertained only if the order hasn't already been dispatched.</li>
-          <li style={listText}>Incorrect Pricing: Music Art reserves the right to refuse or cancel any order placed for a product listed at an incorrect price.</li>
-          <li style={listText}>Delayed Delivery: If a late delivery occurs due to a mistake by the user, any extra cost spent by Music Art for re-delivery shall be claimed from the user.</li>
-          <li style={listText}>Customer Information: The user agrees to provide accurate information. Music Art reserves the right to confirm and validate the information provided.</li>
-          <li style={listText}>Warranty and Returns: Music Art's liability for warranty replacements will only cover the value paid by the customer at the time of purchase.</li>
-          <li style={listText}>Third Party Fraud: Music Art will not be liable for any type of credit card fraud. The liability for fraudulent use of a card rests with the user.</li>
-          <li style={listText}>Exclusive Jurisdiction: This agreement shall be construed in accordance with the applicable laws of India. Only the courts at Varanasi, Uttar Pradesh shall have exclusive jurisdiction in any proceedings arising out of this agreement.</li>
-        </ul>
+        <p style={policyText}>
+          All prices listed on our website are subject to change without notice.
+        </p>
+        <p style={policyText}>
+          We reserve the right to refuse service to anyone for any reason at any time.
+        </p>
+        <p style={policyText}>
+          All products are subject to availability, and we reserve the right to limit the quantity of products supplied.
+        </p>
+        <p style={policyText}>
+          We make every effort to display colors and images of our products accurately. However, we cannot guarantee that your computer monitor's display of any color will be accurate.
+        </p>
+        <p style={policyText}>
+          By placing an order on our website, you represent that you are at least the age of majority in your state or province of residence.
+        </p>
+        <p style={policyText}>
+          Color Discrepancy: We have made every effort to display the color of our products as accurately as possible. However, we cannot guarantee that your monitor's display of color will be accurate.
+        </p>
+        <p style={policyText}>
+          Customer Age: The user certifies that they are at least 18 years of age or have the consent of a parent or legal guardian.
+        </p>
+        <p style={policyText}>
+          Non-Liability Clause: Music Art will not be responsible for any damage suffered by users from the use of the services on musicart.in, including loss of revenue or data due to delays, non-deliveries, or service interruptions.
+        </p>
+        <p style={policyText}>
+          Order Fulfillment: Music Art will take responsibility for your order if it has been shipped to any city using private courier companies that service your pincode.
+        </p>
+        <p style={policyText}>
+          Changes in Price and Stock Availability: Prices and availability of products are subject to change without prior notice at the discretion of Music Art.
+        </p>
+        <p style={policyText}>
+          Order Cancellations: Requests for order cancellations shall be entertained only if the order hasn't already been dispatched.
+        </p>
+        <p style={policyText}>
+          Incorrect Pricing: Music Art reserves the right to refuse or cancel any order placed for a product listed at an incorrect price.
+        </p>
+        <p style={policyText}>
+          Delayed Delivery: If a late delivery occurs due to a mistake by the user, any extra cost spent by Music Art for re-delivery shall be claimed from the user.
+        </p>
+        <p style={policyText}>
+          Customer Information: The user agrees to provide accurate information. Music Art reserves the right to confirm and validate the information provided.
+        </p>
+        <p style={policyText}>
+          Warranty and Returns: Music Art's liability for warranty replacements will only cover the value paid by the customer at the time of purchase.
+        </p>
+        <p style={policyText}>
+          Third Party Fraud: Music Art will not be liable for any type of credit card fraud. The liability for fraudulent use of a card rests with the user.
+        </p>
+        <p style={policyText}>
+          Exclusive Jurisdiction: This agreement shall be construed in accordance with the applicable laws of India. Only the courts at Varanasi, Uttar Pradesh shall have exclusive jurisdiction in any proceedings arising out of this agreement.
+        </p>
       </div>
 
       <div style={sectionStyle}>
@@ -108,7 +140,7 @@ const Policies = () => {
         </p>
         <h3 style={headingStyle}>Information Usage</h3>
         <p style={policyText}>
-          The most important usage of the information collected from you is your email address, which is used to inform you that your order has been confirmed/executed. Your email address is also used to inform you about your customer service-related queries and for any newsletters sent. All other information collected is confidentially stored and will not be disclosed unless needed as per the requirement of the law authorities or in case of any disputes.
+          The most important usage of the information collected from you is your email address, which is used to inform you that your order has been confirmed/executed. Your email address is also used to inform you of your customer service-related queries and for any newsletters sent. All other information collected is confidentially stored and will not be disclosed unless needed as per the requirement of the law authorities or in case of any disputes.
         </p>
         <p style={policyText}>
           We will occasionally ask you to complete optional online surveys. These surveys may ask you for contact information and demographic information. We use this data to tailor your experience at our Website, providing you with content that we think you might be interested in and to display content according to your preferences.
